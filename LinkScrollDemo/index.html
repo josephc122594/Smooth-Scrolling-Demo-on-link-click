@@ -1,0 +1,110 @@
+
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-color: #eaeaea;
+      }
+      header,main,footer{
+        display:block;
+        max-width:1000px;
+        margin:0 auto;
+      }
+      header nav ul li{
+        display:inline-block;
+        padding:5px 10px;
+      }
+      header nav ul li a{
+        color:red;
+      }
+      section {
+        height: 90vh;
+        padding:5vh 0;
+        font-size: 100px;
+        text-align:center;
+        font-size:100%;
+      }
+      section span{
+        display:block;
+      }
+      section:nth-child(2n+1){
+        background-color:red;
+        color:#fff;
+      }
+      section a {
+        color: red;
+      }
+      section:nth-child(2n+1) a{
+        color:#fff;
+      }
+      footer{
+        text-align:center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Smooth Scrolling Demo on link click      
+      </h1>      
+      <p>Using pure javascript.</p>
+      <h2>How to Use</h2>
+      <p>Just add this line.</p>
+      <p>
+        <xmp>
+        <script src="js/LinkToScroll.min.js"></script>
+        <script>
+          //set settings     
+          Scroll.set(1000, true);//(speed,enable/disbled smooth animation)
+          //add this event for all <a> tag
+          Scroll.add('a[href^="#"]');
+        </script>
+        </xmp>
+      </p>
+      <nav>
+        <ul>
+          <li><a href="#el1">Goto Element 1</a></li>
+          <li><a href="#el2">Goto Element 2</a></li>
+          <li><a href="#el3">Goto Element 3</a></li>
+          <li><a href="#el4">Goto Element 4</a></li>
+          <li><a href="#el5">Goto Element 5</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="el1">
+        <span>1</span>
+        <a href="#el5">Goto Element 5</a>
+      </section>
+      <section id="el2">
+        <span>2</span>
+        <a href="#el4">Goto Element 4</a>
+      </section>
+      <section id="el3">
+        <span>3</span>
+        <a href="#el1">Goto Element 1</a>
+      </section>
+      <section id="el4">
+        <span>4</span>
+        <a href="#el2">Goto Element 2</a>
+      </section>
+      <section id="el5">
+        <span>5</span>
+        <a href="#el3">Goto Element 3</a>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Created by: Joseph Capilastique @2018
+      </p>
+    </footer>
+    <script src="js/LinkToScroll.min.js"></script>
+    <script>
+      //set settings     
+      Scroll.set(1000,true);
+      //add this event for all <a> tag
+      Scroll.add('a[href^="#"]');
+    </script>
+  </body>
+</html>
